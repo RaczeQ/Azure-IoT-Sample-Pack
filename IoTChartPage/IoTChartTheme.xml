@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Chart>
+  <ChartAreas>
+    <ChartArea Name="Default">
+      <AxisX>
+        <LabelStyle Format="MM/dd/yyyy hh:mm:ss"></LabelStyle>
+      </AxisX>
+    </ChartArea>
+  </ChartAreas>
+</Chart>

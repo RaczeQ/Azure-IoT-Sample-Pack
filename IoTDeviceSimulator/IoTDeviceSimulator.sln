@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27413.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoTDeviceSimulator", "IoTDeviceSimulator.csproj", "{776BDB34-3404-4812-9513-62716D36C815}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoTChartPage", "..\IoTChartPage\IoTChartPage.csproj", "{6A208019-6ED6-4CD3-B94B-964E992003EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{776BDB34-3404-4812-9513-62716D36C815}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{776BDB34-3404-4812-9513-62716D36C815}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{776BDB34-3404-4812-9513-62716D36C815}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{776BDB34-3404-4812-9513-62716D36C815}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A208019-6ED6-4CD3-B94B-964E992003EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A208019-6ED6-4CD3-B94B-964E992003EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A208019-6ED6-4CD3-B94B-964E992003EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A208019-6ED6-4CD3-B94B-964E992003EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A73ECA91-F120-40E8-8A9D-3F9C8390447E}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "Strona Główna";
+}
+
+<br /><br />
+<div class="panel panel-default">
+    <div class="panel-heading"><h3>Wykres</h3></div>
+    <div id="chart_panel" class="panel-body" style="text-align: center;">
+        <img id="chart" src="" alt="Załaduj wykres" hidden />
+    </div>
+</div>
+<br />
+@using (Ajax.BeginForm("GetChart", new AjaxOptions { OnSuccess = "updateImage", OnBegin = "showLoader" }))
+{
+    <input type="hidden" value=""
+           name="screenHeight" id="screenHeight" />
+    <input type="hidden" value=""
+           name="screenWidth" id="screenWidth" />
+    <div class="col-md-4">
+        @Html.Label("From", "Od")
+        @Html.TextBox("From", "", new { @type = "datetime-local" })
+    </div>
+    <div class="col-md-4">
+        @Html.Label("To", "Do")
+        @Html.TextBox("To", "", new { @type = "datetime-local" })
+    </div>
+    <div class="col-md-4">
+        <input id="submit" type="submit" value="Załaduj wykres" />
+    </div>
+}
+
+<style>
+    .loader {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -100px;
+        margin-left: -100px;
+    }
+</style>
+
+<div class="loader">
+    <img src="~/Content/Images/loading.gif" alt="Loader" />
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script type="text/javascript">
+        function showLoader() {
+            $(".loader").show();
+            $("#submit").attr("disabled", true);
+        }
+        function updateImage(data) {
+            $(".loader").hide();
+            $("#chart").attr("src", "data:image/jpeg;base64," + data.base64image);
+            $("#chart").show();
+            $("#submit").attr("disabled", false);
+        }
+        $(document).ready(function () {
+            $(".loader").hide();
+            $("#screenWidth").val($(window).width());
+            $("#screenHeight").val($(window).height());
+        });
+    </script>
+}
+
